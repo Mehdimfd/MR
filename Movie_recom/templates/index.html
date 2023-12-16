@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+ </head>
+<body>
+    
+ 
+    <form action="/" method="post"> 
+        <input type="text" placeholder="Type to search.." id="movie_title" name="movie_title" required>
+        <button type="submit">
+            <i class="fas fa-search"></i>
+        </button>
+    </form>
+    <br>
+    <div>
+        <h2>Recommendations:</h2>
+        <ul>
+            {% for movie in movies %}
+            <li>{{ movie.title }} - {{ movie.genres }} (Score: {{ movie.score }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+<footer>
+    <p>&copy; 2023 Movie_recom. All rights reserved. By EL MEHDI EL MOUFID</p>
+  </footer>
+</html>

@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+h2{
+  color: #fff;
+}
+input{
+  width: 300px;
+  height: 40px;
+  font-size : 20px; 
+}
+button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 50%; /* Makes the button round */
+  background-color: #db4437; /* Change the background color */
+  color: #fff; /* Change the text color */
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #db4437;
+  background-color: #fff; /* Change the background color on hover */
+}
+
+
+.logo{
+    display: absolute;
+    height: 200px;
+    src: url(Logo.png);
+
+}
+
+h2{
+  width: 300px;
+  list-style: none;
+}
+ul li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  z-index: -1;
+  transition: all .4s;
+}
+ul li:hover::before {
+  width: 100%;
+}
+ul li{
+  font-size: 1.2rem;
+    padding: 20px 30px;
+    margin: 10px 0;
+    background: rgb(23, 23, 23);
+    z-index: 5;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+    transition: all .4s;
+
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center; 
+  background-image: url(movie.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+
+}
+::selection{
+  color: #fff;
+  background: #664AFF;
+}
+.search-box{
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  box-shadow: 5px 5px 30px rgba(0,0,0,.2);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box.active{
+  width: 350px;
+}
+.search-box input{
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 50px;
+  background: #fff;
+  outline: none;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box input.active{
+  opacity: 1;
+}
+.search-box input::placeholder{
+  color: #a6a6a6;
+}
+.search-box .search-icon{
+  position: absolute;
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 60px;
+  width: 60px;
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 22px;
+  color: red;
+  cursor: pointer;
+  z-index: 1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .search-icon.active{
+  right: 5px;
+  height: 50px;
+  line-height: 50px;
+  width: 50px;
+  font-size: 20px;
+  background: red;
+  color: #fff;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .cancel-icon{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.5s 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.search-box .cancel-icon.active{
+  right: -40px;
+  transform: translateY(-50%) rotate(360deg);
+}
+.search-box .search-data{
+  text-align: center;
+  padding-top: 7px;
+  color: #fff;
+  font-size: 18px;
+  word-wrap: break-word;
+}
+.search-box .search-data.active{
+  display: none;
+}
+ul li:nth-child(1)::before {
+  background: #4285f4;
+}
+
+ul li:nth-child(2)::before {
+  background: #db4437;
+}
+
+ul li:nth-child(3)::before {
+  background: #f4b400;
+}
+
+ul li:nth-child(4)::before {
+  background: #0f9d58;
+}
+ul li:nth-child(5)::before {
+  background: #db4437;
+}
+ul li:nth-child(6)::before {
+  background: #f4b400;
+}
+ul li:nth-child(7)::before {
+  background: #4285f4;
+}
+ul li:nth-child(8)::before {
+  background: #db4437;
+}
+ul li:nth-child(9)::before {
+  background: #f4b400;
+}ul li:nth-child(10)::before {
+  background: #0f9d58;
+}
+ul li:hover {
+  transform: translateX(20px);
+}
+footer {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
